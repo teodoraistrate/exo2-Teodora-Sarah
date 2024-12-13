@@ -2,12 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  background-color: #f0f0f0;
+  height: 100vh;
+  background-color: #f0f0f0; /* Contexte général */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.card {
+  background-color: #d3c0e0; /* Couleur  */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.card img {
+  max-width: 75%;
+  max-height: 100vh;
+  border-radius: 15px; /* Coins arrondis pour l'image */
+  object-fit: cover;
+}
+
+
+

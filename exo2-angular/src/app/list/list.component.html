@@ -1,1 +1,23 @@
-<p>list works!</p>
+<div class="list-container">
+  <h1>Liste de Films / Séries</h1>
+
+  <!-- Cadre contenant la liste -->
+  <div class="list-frame">
+    <ul class="movie-list">
+      <li *ngFor="let film of films">
+        <button class="movie-link" (click)="selectFilm(film)">
+          {{ film.title }}
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section des détails du film sélectionné -->
+  <div class="movie-details" *ngIf="selectedFilm">
+    <h2>{{ selectedFilm.title }}</h2>
+    <a [href]="selectedFilm.link" target="_blank">Lien Allociné</a>
+    <img [src]="selectedFilm.poster" alt="Affiche de {{ selectedFilm.title }}" />
+  </div>
+</div>
+
+

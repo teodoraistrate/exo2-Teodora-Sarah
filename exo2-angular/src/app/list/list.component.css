@@ -1,0 +1,84 @@
+.list-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.list-frame {
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  border: 2px solid #d3c0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-list li {
+  margin: 10px 0;
+}
+
+.movie-link {
+  background: none;
+  border: none;
+  color: #4d4d4d;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.movie-link:hover {
+  color: #6c63ff;
+}
+
+.movie-details {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.movie-details img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.movie-details {
+  margin-top: 20px; /* Espacement avec le premier cadre */
+  text-align: center; /* Centrer tout le contenu */
+}
+
+.movie-details img {
+  max-width: 100%; /* Ajuster la taille de l'image à l'intérieur du cadre */
+  max-height: 300px; /* Limiter la hauteur pour éviter qu'elle déborde */
+  margin: 10px auto; /* Espacement autour de l'image */
+  display: block; /* Centrer l'image */
+}
+
+.movie-details a {
+  display: inline-block; /* Centrer le lien */
+  margin-top: 10px; /* Espacement au-dessus du lien */
+  text-decoration: none;
+  font-weight: bold;
+  color: #6c63ff; /* Couleur personnalisée pour le lien */
+}
+
+.movie-details a:hover {
+  text-decoration: underline; /* Souligne au survol */
+}
+
+.list-frame {
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%; /* Taille du cadre */
+  border: 2px solid #d3c0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de relief */
+}

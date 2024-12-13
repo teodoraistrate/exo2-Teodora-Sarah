@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
-// Import your other standalone components if needed
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { GestionComponent } from './gestion/gestion.component';
@@ -18,7 +17,7 @@ import { ContactComponent } from './contact/contact.component';
       { path: 'list', component: ListComponent },
       { path: 'gestion', component: GestionComponent }
     ]),
-    AppComponent // Import the standalone AppComponent
+    AppComponent
   ]
 })
 export class AppModule { }
@@ -29,8 +28,14 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'list', component: ListComponent },
+  { path: '', redirectTo: '/list', pathMatch: 'full' }, //test
   { path: 'gestion', component: GestionComponent },
   { path: 'contact', component: ContactComponent },
 ];
 
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
 

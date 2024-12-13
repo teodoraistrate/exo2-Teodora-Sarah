@@ -1,22 +1,36 @@
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Gère l'espacement entre les zones */
   align-items: center;
   padding: 1rem;
   background-color: #f8f9fa;
   border-top: 1px solid #ddd;
 }
 
+.footer-right {
+  margin-left: auto; /* Pousse le bouton à l'extrême droite */
+  display: flex;
+  align-items: center;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 1; /* Centre les éléments textuels */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .contact-button {
-  margin-left: auto;
   text-decoration: none;
   color: white;
-  background-color: #007bff;
+  background-color: #6c63ff; /* Couleur violette */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
 
 .contact-button:hover {
-  background-color: #0056b3;
+  background-color: #4d4da8; /* Violet plus foncé */
 }

@@ -14,10 +14,9 @@ import { importProvidersFrom } from '@angular/core';
 import { HeaderComponent } from './app/header/header.component';
 import { FooterComponent } from './app/footer/footer.component';
 
+
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes),
-    importProvidersFrom(HeaderComponent, FooterComponent) // Import standalone components
+    provideRouter(routes), // Configuration des routes
   ]
 }).catch(err => console.error(err));
-
