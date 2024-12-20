@@ -1,1 +1,12 @@
-<p>gestion works!</p>
+<div *ngIf="contactData; else notFound">
+  <h2>Dernier formulaire soumis</h2>
+  <p>Prénom: {{ contactData.prenom }}</p>
+  <p>Nom: {{ contactData.nom }}</p>
+  <p>Âge: {{ contactData.age }}</p>
+  <p *ngIf="contactData.email">Email: {{ contactData.email }}</p>
+  <p>Commentaire: {{ contactData.commentaire }}</p>
+</div>
+<ng-template #notFound>
+  <h2>404 Not Found</h2>
+</ng-template>
+

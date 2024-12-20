@@ -15,7 +15,8 @@ import { ContactComponent } from './contact/contact.component';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'list', component: ListComponent },
-      { path: 'gestion', component: GestionComponent }
+      { path: 'gestion', component: GestionComponent },
+      { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
     AppComponent
   ]
