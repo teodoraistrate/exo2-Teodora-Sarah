@@ -18,25 +18,28 @@ import { ContactComponent } from './contact/contact.component';
       { path: 'gestion', component: GestionComponent },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
-    AppComponent
+    AppComponent,
+    CommonModule
   ]
 })
 export class AppModule { }
 
 import { Routes } from '@angular/router';
+import {CommonModule} from "@angular/common";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'list', component: ListComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full' }, //test
   { path: 'gestion', component: GestionComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
 })
+
 export class AppRoutingModule {}
 
