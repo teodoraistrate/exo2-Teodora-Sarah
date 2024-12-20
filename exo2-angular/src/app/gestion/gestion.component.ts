@@ -73,12 +73,12 @@ export class GestionComponent implements OnInit {
       this.contactData = data;
     });
   }*/
-  ngOnInit() {
-    console.log('ngOnInit() de GestionComponent appelée'); // Log de vérification
-
-    this.contactData = this.formDataService.getData(); // Récupère les données du service
-    console.log('Données récupérées dans GestionComponent :', this.contactData); // Log des données récupérées
+  ngOnInit(): void {
+    console.log('ngOnInit() de GestionComponent appelée');
+    this.contactData = this.formDataService.getData(); // Récupère les données depuis localStorage
+    console.log('Données récupérées dans GestionComponent :', this.contactData);
   }
+
 
 
 }

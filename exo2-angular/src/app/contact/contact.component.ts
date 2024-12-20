@@ -45,18 +45,17 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log('onSubmit() appelée');
-
     if (this.contactForm.valid) {
       console.log('Formulaire valide, données soumises :', this.contactForm.value);
-      this.formDataService.saveData(this.contactForm.value); // Sauvegarde les données
-      console.log('Données envoyées au service');
+      this.formDataService.saveData(this.contactForm.value); // Sauvegarde dans localStorage
       alert('Le formulaire est valide');
-      this.router.navigate(['/gestion']); // Utilisation de Router pour éviter le rechargement
+      this.router.navigate(['/gestion']); // Navigation Angular
     } else {
       console.log('Formulaire invalide');
       alert('Veuillez remplir correctement le formulaire.');
     }
   }
+
 
 
 
