@@ -1,0 +1,70 @@
+/* Conteneur principal pour la page contact */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alignement vers le haut */
+  min-height: calc(100vh - 100px); /* Ajuster la hauteur de la section contact en fonction du header et footer */
+  background-color: #f0f0f0; /* Même fond que la home */
+  padding: 20px; /* Un peu d'espace autour */
+  box-sizing: border-box; /* S'assurer que le padding n'affecte pas la taille de l'élément */
+  margin-top: 50px; /* Un espace au-dessus pour le header */
+  margin-bottom: 50px; /* Un espace en dessous pour le footer */
+}
+
+/* Style général pour la carte du formulaire */
+.contact-card {
+  background-color: #d3c0e0; /* Même couleur que la home */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Style pour les champs du formulaire */
+.contact-card form div {
+  margin-bottom: 15px;
+}
+
+/* Style pour les labels */
+.contact-card form label {
+  font-size: 1rem;
+  color: #4d4d4d;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style pour les champs de saisie */
+.contact-card form input,
+.contact-card form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Style pour le bouton */
+.contact-card form button {
+  text-decoration: none;
+  color: white;
+  background-color: #4d4da8; /* Violet foncé pour correspondre à la home */
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-card form button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.contact-card form button:hover:not(:disabled) {
+  background-color: #3a3a99;
+  transform: scale(1.05);
+}
+
