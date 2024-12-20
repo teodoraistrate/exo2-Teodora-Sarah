@@ -32,7 +32,7 @@ export class ListComponent {
     {
       title: 'Pirates des Caraïbes : la Malédiction du Black Pearl',
       link: 'https://www.allocine.fr/film/fichefilm_gen_cfilm=46117.html',
-      poster: 'assets/film4.jpg'
+      poster: 'assets/film4.gif'
     },
     {
       title: 'Vampire Diaries',
@@ -41,16 +41,12 @@ export class ListComponent {
     }
   ];
 
-  // Propriété pour stocker le film sélectionné
   selectedFilm: any = null;
 
-  // Méthode appelée lorsqu'un film est sélectionné
   selectFilm(film: any): void {
     console.log('Film sélectionné:', film);
-    this.selectedFilm = film; // Met à jour selectedFilm avec le film cliqué
+    this.selectedFilm = film;
   }
-
-
 
 }
 

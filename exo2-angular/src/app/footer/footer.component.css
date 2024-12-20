@@ -1,6 +1,6 @@
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Gère l'espacement entre les zones */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   background-color: #f8f9fa;
@@ -8,14 +8,14 @@
 }
 
 .footer-right {
-  margin-left: auto; /* Pousse le bouton à l'extrême droite */
+  margin-left: auto;
   display: flex;
   align-items: center;
 }
 
 .footer-center {
   text-align: center;
-  flex: 1; /* Centre les éléments textuels */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +25,23 @@
 .contact-button {
   text-decoration: none;
   color: white;
-  background-color: #6c63ff; /* Couleur violette */
+  background-color: #6c63ff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
 
 .contact-button:hover {
-  background-color: #4d4da8; /* Violet plus foncé */
+  background-color: #4d4da8;
+}
+
+.footer-container {
+  background-color: #cfb5b4;
+  border-top: 1px solid #c7d2fe;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.footer-container:hover {
+  background-color: #c7d2fe;
 }

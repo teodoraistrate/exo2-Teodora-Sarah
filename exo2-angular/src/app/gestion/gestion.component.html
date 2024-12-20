@@ -1,29 +1,36 @@
-<!--
-<div *ngIf="contactData; else notFound">
-  <h2>Dernier formulaire soumis</h2>
-  <p>Prénom: {{ contactData.prenom }}</p>
-  <p>Nom: {{ contactData.nom }}</p>
-  <p>Âge: {{ contactData.age }}</p>
-  <p *ngIf="contactData.email">Email: {{ contactData.email }}</p>
-  <p>Commentaire: {{ contactData.commentaire }}</p>
-</div>
-<ng-template #notFound>
-  <h2>404 Not Found</h2>
-</ng-template>
--->
-
 <div class="contact-container">
   <div class="contact-card">
     <div *ngIf="contactData; else notFound">
-      <h2>Dernier formulaire soumis</h2>
-      <p>Prénom: {{ contactData.prenom }}</p>
-      <p>Nom: {{ contactData.nom }}</p>
-      <p>Âge: {{ contactData.age }}</p>
-      <p *ngIf="contactData.email">Email: {{ contactData.email }}</p>
-      <p>Commentaire: {{ contactData.commentaire }}</p>
+      <h3 style="color:#4d4d4d">Dernier formulaire soumis</h3>
+      <table>
+        <tr>
+          <th>Champ</th>
+          <th>Valeur</th>
+        </tr>
+        <tr>
+          <td>Prénom</td>
+          <td>{{ contactData.prenom }}</td>
+        </tr>
+        <tr>
+          <td>Nom</td>
+          <td>{{ contactData.nom }}</td>
+        </tr>
+        <tr>
+          <td>Âge</td>
+          <td>{{ contactData.age }}</td>
+        </tr>
+        <tr *ngIf="contactData.email">
+          <td>Email</td>
+          <td>{{ contactData.email }}</td>
+        </tr>
+        <tr>
+          <td>Commentaire</td>
+          <td>{{ contactData.commentaire }}</td>
+        </tr>
+      </table>
     </div>
     <ng-template #notFound>
-      <h2>404 Not Found</h2>
+      <h3 style="color:#4d4d4d">404 Not Found</h3>
     </ng-template>
   </div>
 </div>

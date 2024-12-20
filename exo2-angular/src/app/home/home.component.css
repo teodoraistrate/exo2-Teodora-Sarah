@@ -3,14 +3,14 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Contexte général */
+  background-color: #f0f0f0;
 }
 
 .card {
-  background-color: #d3c0e0; /* Couleur  */
-  border-radius: 20px; /* Coins arrondis */
+  background-color: #cfb5b4;
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
 .card img {
   max-width: 75%;
   max-height: 100vh;
-  border-radius: 15px; /* Coins arrondis pour l'image */
+  border-radius: 15px;
   object-fit: cover;
 }
 

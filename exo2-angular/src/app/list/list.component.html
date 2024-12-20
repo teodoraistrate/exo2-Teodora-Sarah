@@ -1,7 +1,5 @@
 <div class="list-container">
   <h1>Liste de Films / Séries</h1>
-
-  <!-- Cadre contenant la liste -->
   <div class="list-frame">
     <ul class="movie-list">
       <li *ngFor="let film of films">
@@ -11,8 +9,6 @@
       </li>
     </ul>
   </div>
-
-  <!-- Section des détails du film sélectionné -->
   <div class="movie-details" *ngIf="selectedFilm">
     <h2>{{ selectedFilm.title }}</h2>
     <a [href]="selectedFilm.link" target="_blank">Lien Allociné</a>

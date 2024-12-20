@@ -14,8 +14,9 @@
         <label>Âge:</label>
         <input type="number" formControlName="age" />
       </div>
-      <div>
-        <input type="checkbox" (change)="toggleEmail()" /> Hide Email
+      <div class="checkbox-container">
+        <input id="hideEmail" type="checkbox" (change)="toggleEmail()" />
+        <label for="hideEmail">Masquer l'email</label>
       </div>
       <div *ngIf="!isEmailHidden">
         <label>Email:</label>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root', // Le service est singleton
+  providedIn: 'root',
 })
 export class FormDataService {
   private readonly STORAGE_KEY = 'contactData'; // Clé pour localStorage
