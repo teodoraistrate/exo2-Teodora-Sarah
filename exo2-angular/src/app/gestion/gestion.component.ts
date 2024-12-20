@@ -50,6 +50,7 @@ export class GestionComponent implements OnInit {
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactService } from '../contact/contact.service';
+import { FormDataService } from './form-data.service';
 
 @Component({
   selector: 'app-gestion',
@@ -61,13 +62,23 @@ import { ContactService } from '../contact/contact.service';
 export class GestionComponent implements OnInit {
   contactData: any;
 
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService, private formDataService: FormDataService) {}
 
-  ngOnInit(): void {
+  /*ngOnInit(): void {
+    this.contactData = this.formDataService.getData();
+    console.log(this.contactData)
     // S'abonner à lastContact$ pour recevoir les mises à jour
     this.contactService.lastContact$.subscribe((data) => {
       console.log('Données réactives récupérées:', data);
       this.contactData = data;
     });
+  }*/
+  ngOnInit() {
+    console.log('ngOnInit() de GestionComponent appelée'); // Log de vérification
+
+    this.contactData = this.formDataService.getData(); // Récupère les données du service
+    console.log('Données récupérées dans GestionComponent :', this.contactData); // Log des données récupérées
   }
+
+
 }

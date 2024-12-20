@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
+
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { GestionComponent } from './gestion/gestion.component';
@@ -29,9 +30,10 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'list', component: ListComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full' }, //test
+  //{ path: '', redirectTo: '/list', pathMatch: 'full' }, //test
   { path: 'gestion', component: GestionComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '/contact' }
 ];
 
 @NgModule({

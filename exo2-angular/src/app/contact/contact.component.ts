@@ -1,39 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import { FormDataService } from '../gestion/form-data.service';
+import {NgIf} from "@angular/common";
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
+  templateUrl: './contact.component.html',
   standalone: true,
   imports: [
-    CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgIf
   ],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
-  //providers: [ContactService]
+  styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
-  private fb: FormBuilder = new FormBuilder();
-  contactForm: FormGroup = this.fb.group({
-    prenom: ['', Validators.required],
-    nom: ['', Validators.required],
-    age: [''],
-    email: ['', [Validators.required, Validators.email]],
-    commentaire: ['', Validators.required]
-  });
+export class ContactComponent implements OnInit {
+  contactForm: FormGroup;
   isEmailHidden = false;
-  //private contactService = new ContactService();
 
-  constructor(private router: Router, private contactService: ContactService) {
-    this.contactService = contactService;
+  constructor(private fb: FormBuilder, private router: Router, private formDataService: FormDataService) {
+    this.contactForm = this.fb.group({
+      prenom: ['', Validators.required],
+      nom: ['', Validators.required],
+      age: [''],
+      email: ['', [Validators.required, Validators.email]],
+      commentaire: ['', Validators.required]
+    });
   }
+
+  ngOnInit(): void {}
 
   toggleEmail() {
     this.isEmailHidden = !this.isEmailHidden;
     const emailControl = this.contactForm.get('email');
+
     if (this.isEmailHidden) {
       emailControl?.clearValidators();
     } else {
@@ -42,15 +42,25 @@ export class ContactComponent {
     emailControl?.updateValueAndValidity();
   }
 
+
   onSubmit() {
+    console.log('onSubmit() appelée');
+
     if (this.contactForm.valid) {
+      console.log('Formulaire valide, données soumises :', this.contactForm.value);
+      this.formDataService.saveData(this.contactForm.value); // Sauvegarde les données
+      console.log('Données envoyées au service');
       alert('Le formulaire est valide');
-      const formData = this.contactForm.value;
-      // console.log(formData);
-      // Stocke les données dans un service
-      this.contactService.setContactData(formData);
-      // Navigate to home page
-      this.router.navigate(['/']);
+      this.router.navigate(['/gestion']); // Utilisation de Router pour éviter le rechargement
+    } else {
+      console.log('Formulaire invalide');
+      alert('Veuillez remplir correctement le formulaire.');
     }
   }
+
+
+
+
+
+
 }
