@@ -30,10 +30,9 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'list', component: ListComponent },
-  //{ path: '', redirectTo: '/list', pathMatch: 'full' }, //test
   { path: 'gestion', component: GestionComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '/contact' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
