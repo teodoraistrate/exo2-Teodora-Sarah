@@ -1,0 +1,43 @@
+/* Conteneur principal pour la page contact */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alignement vers le haut */
+  min-height: calc(100vh - 100px); /* Ajuster la hauteur de la section contact en fonction du header et footer */
+  background-color: #f0f0f0; /* Même fond que la home */
+  padding: 20px; /* Un peu d'espace autour */
+  box-sizing: border-box; /* S'assurer que le padding n'affecte pas la taille de l'élément */
+  margin-top: 50px; /* Un espace au-dessus pour le header */
+  margin-bottom: 50px; /* Un espace en dessous pour le footer */
+}
+
+/* Style général pour la carte du formulaire */
+.contact-card {
+  background-color: #d3c0e0; /* Même couleur que la home */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Style pour les titres */
+.contact-card h2 {
+  font-size: 1.5rem;
+  color: #4d4d4d;
+  margin-bottom: 20px;
+}
+
+/* Style pour les paragraphes */
+.contact-card p {
+  font-size: 1rem;
+  color: #4d4d4d;
+  margin-bottom: 10px;
+}
+
+/* Style pour la section "404 Not Found" */
+.contact-card ng-template h2 {
+  color: #d9534f; /* Rouge pour l'erreur 404 */
+  font-size: 1.5rem;
+  margin-top: 20px;
+}

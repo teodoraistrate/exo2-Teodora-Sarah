@@ -1,1 +1,31 @@
-
+<div class="contact-container">
+  <div class="contact-card">
+    <h3 style="color:#4d4d4d">Envoyez-nous un message pour toute question ou suggestion !</h3>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label>Prénom:</label>
+        <input type="text" formControlName="prenom" required />
+      </div>
+      <div>
+        <label>Nom:</label>
+        <input type="text" formControlName="nom" required />
+      </div>
+      <div>
+        <label>Âge:</label>
+        <input type="number" formControlName="age" />
+      </div>
+      <div>
+        <input type="checkbox" (change)="toggleEmail()" /> Hide Email
+      </div>
+      <div *ngIf="!isEmailHidden">
+        <label>Email:</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div>
+        <label>Commentaire:</label>
+        <textarea formControlName="commentaire" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!contactForm.valid">Envoyer</button>
+    </form>
+  </div>
+</div>
